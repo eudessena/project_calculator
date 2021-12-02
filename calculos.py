@@ -40,12 +40,22 @@ def operacoes():
             print(f'Resultado: \n{potenciacao:.2f}')
     
         else:
-             print('opção inválida')
-    
+            
+            print('opção inválida')
+            
+            validar = input('deseja tentar novamente? Y/N ').upper()
+            
+            while validar != 'Y' and validar != 'N':
+                validar = input('deseja tentar novamente? Y/N ').upper()
+                
+            if validar == 'Y':
+               operacoes()
+            else:
+                print('voce não tentou novamente!')         
+                 
     except:
     
         print('voce digitou um valor não numérico!')
-        
         
                    
         retorno = input('deseja tentar novamente? Y/N ').upper()
@@ -54,18 +64,11 @@ def operacoes():
         
             retorno = input('deseja tentar novamente? Y/N ').upper()
         
-    if retorno == 'Y':
-        print('calculadora', sep='.')
-
-        num_1 = input('informe o primeiro numero: ')
-        num_2 = input('informe o segundo numero: ')
-        try:
-                num_1 = float(num_1)
-                num_2 = float(num_2)
-            
-                operacoes()
-        except:
-                print('voce digitou novamente um valor não numérico!')    
+        if retorno == 'Y':
+            operacoes()
+                
+        else:
+            print('você não tentou novamente!')    
 
         
         
