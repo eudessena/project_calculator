@@ -7,7 +7,7 @@ print(f'\n\n{inicio}',sep='-')
 calculos.operacoes()
 
 
-print('programa encerradoo!', sep='-')   
+print('programa encerradooo!', sep='-')   
 
                              
         
