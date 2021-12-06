@@ -32,8 +32,11 @@ def operacoes():
             print(f'Resultado: \n{multiplicacao:.2f}')
     
         elif operacao == '4':
-            divisao = num_1 / num_2
-            print(f'Resultado: \n{divisao:.2f}')
+            if num_2 == 0:
+                print('voce nao pode dividir por zero')
+            else:    
+                divisao = num_1 / num_2
+                print(f'Resultado: \n{divisao:.2f}')
     
         elif operacao == '5':
             potenciacao = num_1 ** num_2
